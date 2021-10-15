@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block body %}
+<form action="/post" method="POST">
+    {% module xsrf_form_html() %}
+    Массив: <input name="array" type="text">
+    <input type="submit" value="Отправить">
+</form>
+{% end %}
